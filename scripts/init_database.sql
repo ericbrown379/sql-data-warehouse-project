@@ -1,3 +1,39 @@
+/*
+===============================================================================
+Create Database and Schemas
+===============================================================================
+
+Script Purpose:
+    This script creates a new database named 'DataWarehouse' after checking
+    if it already exists.
+
+    If the database exists, it will be dropped and recreated. Additionally,
+    the script sets up three schemas within the database:
+        - bronze
+        - silver
+        - gold
+
+    These schemas follow the Medallion Architecture commonly used in
+    modern data engineering pipelines.
+
+        bronze  -> raw ingested data
+        silver  -> cleaned and transformed data
+        gold    -> analytics-ready datasets
+
+WARNING:
+    Running this script will drop the entire 'DataWarehouse' database if it
+    already exists.
+
+    All data in the database will be permanently deleted. Proceed with
+    caution and ensure proper backups exist before executing this script.
+
+Author: Eric Brown
+Date: 2026-03-13
+Environment: PostgreSQL
+Project: Data Warehouse Setup
+===============================================================================
+*/
+
 USE master;
 GROUP BY
 
